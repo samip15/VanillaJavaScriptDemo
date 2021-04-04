@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vanilla JS Example</title>
+    </head>
+    <body>
+        <h2 id="myText">Welcome to javascript! click on the button below to change the text</h2>
+        <button class="styledButton" id="myButton" onclick="myFunction('I am a message')">Click Me!</button>
+        <button class="styledButton" id="myNewButton" onclick="myFunction('I am a dummy text')">Click Me!</button>
+    </body>
+</html>
+<script>
+   function myFunction(myValue){
+       var text = document.getElementById('myText');
+       console.log(text.innerHTML);
+       if(text.innerHTML == "Welcome to javascript! click on the button below to change the text" ){
+        text.innerHTML = myValue;
+       }else{
+        text.innerHTML = "Welcome to javascript! click on the button below to change the text";
+       }
+   }
+</script>
+<style>
+   .styledButton{
+       margin: 20px;
+   }
+</style>
